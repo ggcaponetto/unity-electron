@@ -71,14 +71,17 @@ app.on('ready', async () => {
 
   mainWindow = new BrowserWindow({
     show: false,
-    width: 1024,
-    height: 728,
-    opacity: 0.8,
+    opacity: 1,
+    width: 500, height: 500,
+    fullscreenable: true,
+    fullscreen: false,
     webPreferences: {
       experimentalFeatures: true,
       offscreen: false
     }
   });
+
+  mainWindow.maximize();
 
   mainWindow.loadURL(`file://${__dirname}/app.html`);
 
