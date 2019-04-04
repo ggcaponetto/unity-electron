@@ -33,7 +33,9 @@
     "test-all": "yarn lint && yarn flow && yarn build && yarn test && yarn build-e2e && yarn test-e2e",
     "test-e2e": "node -r @babel/register ./internals/scripts/CheckBuiltsExist.js && cross-env NODE_ENV=test testcafe electron:./ ./test/e2e/HomePage.e2e.js",
     "test-e2e-live": "node -r @babel/register ./internals/scripts/CheckBuiltsExist.js && cross-env NODE_ENV=test testcafe-live electron:./ ./test/e2e/HomePage.e2e.js",
-    "test-watch": "yarn test --watch"
+    "test-watch": "yarn test --watch",
+    "unity-messaging-start-listen": "npx babel-node ./unity-messaging/read.js",
+    "unity-messaging-start-write": "npx babel-node ./unity-messaging/write.js"
   },
   "lint-staged": {
     "*.{js,jsx}": [
@@ -162,7 +164,8 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.1.6",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
     "@babel/plugin-proposal-class-properties": "^7.1.0",
     "@babel/plugin-proposal-decorators": "^7.1.6",
     "@babel/plugin-proposal-do-expressions": "^7.0.0",
