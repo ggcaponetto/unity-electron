@@ -34,7 +34,8 @@
     "test-e2e": "node -r @babel/register ./internals/scripts/CheckBuiltsExist.js && cross-env NODE_ENV=test testcafe electron:./ ./test/e2e/HomePage.e2e.js",
     "test-e2e-live": "node -r @babel/register ./internals/scripts/CheckBuiltsExist.js && cross-env NODE_ENV=test testcafe-live electron:./ ./test/e2e/HomePage.e2e.js",
     "test-watch": "yarn test --watch",
-    "unity-messaging-start-listen": "npx babel-node ./unity-messaging/read.js",
+    "unity-messaging-start-listen-http": "npx babel-node ./unity-messaging/http.js",
+    "unity-messaging-start-listen-file": "npx babel-node ./unity-messaging/read.js",
     "unity-messaging-start-write": "npx babel-node ./unity-messaging/write.js"
   },
   "lint-staged": {
@@ -260,6 +261,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.5.0",
+    "body-parser": "^1.18.3",
     "devtron": "^1.4.0",
     "electron-debug": "^2.0.0",
     "electron-log": "^2.2.17",
