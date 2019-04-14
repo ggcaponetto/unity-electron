@@ -269,6 +269,7 @@
     "express": "^4.16.4",
     "ffmpeg.js": "^3.1.9001",
     "history": "^4.7.2",
+    "html2canvas": "^1.0.0-rc.1",
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-hot-loader": "^4.3.12",
